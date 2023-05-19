@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "../include/stdafx.h"
 
 int main() {
     int arr[] = {1, 4, 2, 3, 5, 6};
