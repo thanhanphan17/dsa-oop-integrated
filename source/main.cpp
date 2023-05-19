@@ -7,7 +7,7 @@ int main() {
     SortingAlgorithm sa(arr, n);
     sa.printArray();
     std::cout << "\n";
-    sa.heapSort();
+    sa.mergeSort();
     sa.printArray();
 
     return 0;
