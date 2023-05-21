@@ -21,4 +21,5 @@ public:
     void heapSort();
     void mergeSort();
     void quickSort();
+    void counting();
 };
