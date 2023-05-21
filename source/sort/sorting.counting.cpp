@@ -1,3 +1,4 @@
+// BigO = O(n)
 #include "../../include/stdafx.h"
 
 const int MAXVAL = 1000;

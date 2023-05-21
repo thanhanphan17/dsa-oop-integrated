@@ -1,3 +1,4 @@
+// BigO = O(nlogn)
 #include "../../include/stdafx.h"
 
 int SortingAlgorithm::partition(int low, int high) {

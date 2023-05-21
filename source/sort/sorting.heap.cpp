@@ -1,3 +1,4 @@
+// BigO = O(nlogn)
 #include "../../include/stdafx.h"
 
 void SortingAlgorithm::heapify(int i, int _size) {

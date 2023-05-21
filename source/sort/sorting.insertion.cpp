@@ -1,3 +1,4 @@
+// BigO = O(n^2)
 #include "../../include/stdafx.h"
 
 void SortingAlgorithm::insertionSort() {

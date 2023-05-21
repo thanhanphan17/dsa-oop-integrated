@@ -1,3 +1,4 @@
+// BigO = O(n)
 #include "../../include/stdafx.h"
 
 void SortingAlgorithm::countingSort(int exp) {
