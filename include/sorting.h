@@ -8,6 +8,8 @@ private:
     void heapify(int, int);
     void merge(int, int, int);
     void mergeSort(int, int);
+    int partition(int, int);
+    void quickSort(int, int);
 
 public:
     SortingAlgorithm();
@@ -18,4 +20,5 @@ public:
     void insertionSort();
     void heapSort();
     void mergeSort();
+    void quickSort();
 };
