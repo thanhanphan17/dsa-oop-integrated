@@ -10,6 +10,9 @@ private:
     void mergeSort(int, int);
     int partition(int, int);
     void quickSort(int, int);
+    void countingSort(int);
+
+    int getMax();
 
 public:
     SortingAlgorithm();
@@ -21,5 +24,6 @@ public:
     void heapSort();
     void mergeSort();
     void quickSort();
-    void counting();
+    void countingSort();
+    void radixSort();
 };

@@ -2,7 +2,7 @@
 
 const int MAXVAL = 1000;
 
-void SortingAlgorithm::counting() {
+void SortingAlgorithm::countingSort() {
     int* output = new int[this->size];
     int* countArr = new int[MAXVAL];
 
@@ -32,4 +32,7 @@ void SortingAlgorithm::counting() {
     for (int i = 0; i < this->size; ++i) {
         this->arr[i] = output[i];
     }
+
+    delete[] output;
+    delete[] countArr;
 }

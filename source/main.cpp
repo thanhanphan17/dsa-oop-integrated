@@ -7,7 +7,7 @@ int main() {
     SortingAlgorithm sa(arr, n);
     sa.printArray();
     std::cout << "\n";
-    sa.counting();
+    sa.radixSort();
     sa.printArray();
 
     return 0;
