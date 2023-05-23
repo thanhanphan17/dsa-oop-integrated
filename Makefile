@@ -7,7 +7,7 @@ SRC_FILES := $(foreach SRC_DIR, $(SRC_DIR), $(wildcard $(SRC_DIR)/*.cpp)) # Get 
 
 run:
 	@g++ $(SRC_FILES) -o output/main
-	@./output/main.exe
+	@./output/main
 
 print:
 	@echo $(SRC_FILES)
