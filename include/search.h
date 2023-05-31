@@ -14,16 +14,8 @@ public:
     BinarySearch(int*, int);
 
     std::pair<int, MyErr*> binarySearchLinear(int); // Search all array
-    // std::pair<int, bool> binarySearchLinear(int, int, int); // Search in segment
+    std::pair<int, MyErr*> binarySearchLinear(int, int, int); // Search in segment
 
-    int binarySearchRecursion(int); // Search all array
-    int binarySearchRecursion(int, int, int); // Search in segment
+    std::pair<int, MyErr*> binarySearchRecursion(int); // Search all array
+    std::pair<int, MyErr*> binarySearchRecursion(int, int, int); // Search in segment
  };
-
-/*
-find 8 
-size = 10
-      8  
-    7 8 
-
-*/
