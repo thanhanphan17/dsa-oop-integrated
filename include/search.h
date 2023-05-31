@@ -1,3 +1,5 @@
+// Big-O = O(log(n))u
+
 #pragma once
 #include <iostream>
 #include "errordefine.h"

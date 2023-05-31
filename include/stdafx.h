@@ -7,6 +7,7 @@
 #include "sorting.h"
 #include "search.h"
 #include "errordefine.h"
+#include "hash.h"
 
 // Define value
 #define CAPACITY  100

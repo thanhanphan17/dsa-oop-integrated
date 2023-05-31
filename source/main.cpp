@@ -2,11 +2,26 @@
 
 void testSort();
 void testSearch();
+void testHash();
 
 int main() {
-    testSearch();
+    testHash();
 
     return 0;
+}
+
+void testHash() {
+    HashTableChaining ht(10);
+    ht.add(5);
+    ht.add(15);
+    ht.add(3);
+    ht.add(7);
+
+    ht.showTable();    
+
+    std::cout << ht.find(7) << "\n";
+    std::cout << ht.find(8) << "\n";
+    std::cout << ht.find(5) << "\n";
 }
 
 void testSort() {
