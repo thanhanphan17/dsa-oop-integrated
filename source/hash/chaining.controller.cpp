@@ -26,3 +26,39 @@ bool HashTableChaining::find(int key) {
     return this->find(index, key);
 }
 
+void HashTableChaining::remove(int key) {
+    int index = this->hash(key);
+
+    Node*& head = this->HT[index];
+
+    if (head == nullptr) {
+        return;
+    }
+
+    if (head->data == key) {
+        Node* pNode = head; 
+        head = head->pNext;
+        delete pNode;
+        pNode = nullptr;
+
+        return;
+    }
+
+    Node* pNode = head;
+    Node* pPrev = head;
+    
+    while (pNode) {
+        pPrev = pNode;
+        pNode = pNode->pNext;
+
+        if (pNode && pNode->data == key) {
+            pPrev->pNext = pNode->pNext;
+            delete pNode;
+            pNode = nullptr;
+
+            return;
+        }
+    }
+}
+
+

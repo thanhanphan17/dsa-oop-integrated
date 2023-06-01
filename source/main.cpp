@@ -11,17 +11,19 @@ int main() {
 }
 
 void testHash() {
-    HashTableChaining ht(10);
-    ht.add(5);
-    ht.add(15);
-    ht.add(3);
-    ht.add(7);
+    HashTable *hashTable = new LinearProbing(10);
 
-    ht.showTable();    
+    hashTable->add(5);
+    hashTable->add(15);
+    hashTable->add(25);
+    hashTable->add(3);
+    hashTable->add(7);
 
-    std::cout << ht.find(7) << "\n";
-    std::cout << ht.find(8) << "\n";
-    std::cout << ht.find(5) << "\n";
+    hashTable->showTable();    
+
+    std::cout << hashTable->find(7) << "\n";
+    std::cout << hashTable->find(8) << "\n";
+    std::cout << hashTable->find(25) << "\n";
 }
 
 void testSort() {

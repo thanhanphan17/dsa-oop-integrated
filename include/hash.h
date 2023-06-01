@@ -6,8 +6,12 @@ protected:
 
     int hash(int);
 public:
-    // HashTable();
     HashTable(int capacity);
+
+    virtual void add(int) = 0;
+    virtual void showTable() = 0;
+    virtual bool find(int) = 0;
+    virtual void remove(int) = 0;
 };
 
 class HashTableChaining : public HashTable {
@@ -36,13 +40,47 @@ private:
     void deleteList(Node*);
 
 public: 
-    HashTableChaining(int capacity);
+    HashTableChaining(int);
     ~HashTableChaining();
 
     void add(int);
     void showTable();
     bool find(int);
+    void remove(int);
 };
 
 class HashTableOpenAddressing : public HashTable {
+protected:
+    int *HT;
+
+public:
+    HashTableOpenAddressing(int);
+    ~HashTableOpenAddressing();
+
+    virtual int probing(int) = 0;
+
+    void showTable();
+    void add(int);
+};
+
+class LinearProbing : public HashTableOpenAddressing {
+public:
+    LinearProbing(int);
+
+    bool find(int);
+    void remove(int);
+    int probing(int);
+};
+
+class QuadraticProbing : public HashTableOpenAddressing {
+public:
+    QuadraticProbing(int);
+
+    bool find(int);
+    void remove(int);
+    int probing(int);
+};
+
+class DoubleHashing : public HashTableOpenAddressing {
+
 };
