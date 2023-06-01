@@ -11,7 +11,7 @@ int main() {
 }
 
 void testHash() {
-    HashTable *hashTable = new LinearProbing(10);
+    HashTable *hashTable = new QuadraticProbing(10);
 
     hashTable->add(5);
     hashTable->add(15);
