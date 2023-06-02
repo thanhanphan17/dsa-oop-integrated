@@ -1,7 +1,7 @@
 #include "../../include/stdafx.h"
 
 std::pair<int, MyErr*> BinarySearch::binarySearchLinear(int val) {
-    if (!this->isReady()) { // array is not in sorting status
+    if (!this->isReady()) {  // array is not in sorting status
         return {-1, new MyErr("Can not search in this array!")};
     }
 
@@ -14,18 +14,19 @@ std::pair<int, MyErr*> BinarySearch::binarySearchLinear(int val) {
             return {middle, new MyErr()};
         }
 
-        if (this->arr[middle] < val) { // ignore left side
+        if (this->arr[middle] < val) {  // ignore left side
             left = middle + 1;
-        } else { // ignore right side
-            right = middle -1;
+        } else {  // ignore right side
+            right = middle - 1;
         }
     }
 
     return {-1, new MyErr("Not found")};
 }
 
-std::pair<int, MyErr*> BinarySearch::binarySearchLinear(int left, int right, int val) {
-    if (!this->isReady()) { // array is not in sorting status
+std::pair<int, MyErr*> BinarySearch::binarySearchLinear(int left, int right,
+                                                        int val) {
+    if (!this->isReady()) {  // array is not in sorting status
         return {-1, new MyErr("Can not search in this array!")};
     }
 
@@ -36,13 +37,12 @@ std::pair<int, MyErr*> BinarySearch::binarySearchLinear(int left, int right, int
             return {middle, new MyErr()};
         }
 
-        if (this->arr[middle] < val) { // ignore left side
+        if (this->arr[middle] < val) {  // ignore left side
             left = middle + 1;
-        } else { // ignore right side
-            right = middle -1;
+        } else {  // ignore right side
+            right = middle - 1;
         }
     }
 
     return {-1, new MyErr("Not found")};
 }
-

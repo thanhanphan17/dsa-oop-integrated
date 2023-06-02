@@ -82,5 +82,13 @@ public:
 };
 
 class DoubleHashing : public HashTableOpenAddressing {
+private:
+    int hash2(int);
 
+public:
+    DoubleHashing(int);
+
+    bool find(int);
+    void remove(int);
+    int probing(int);
 };

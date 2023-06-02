@@ -16,3 +16,4 @@ HashTableOpenAddressing::~HashTableOpenAddressing() {
 
 LinearProbing::LinearProbing(int _capacity) : HashTableOpenAddressing(_capacity) {}
 QuadraticProbing::QuadraticProbing(int _capacity) : HashTableOpenAddressing(_capacity) {};
+DoubleHashing::DoubleHashing(int _capacity) : HashTableOpenAddressing(_capacity) {}
