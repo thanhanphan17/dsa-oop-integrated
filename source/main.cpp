@@ -3,11 +3,30 @@
 void testSort();
 void testSearch();
 void testHash();
+void testTree();
 
 int main() {
-    testHash();
+    testTree();
 
     return 0;
+}
+
+void testTree() {
+    BST bst;
+    bst.insert(6);
+    bst.insert(2);
+    bst.insert(7);
+    bst.insert(1);
+    bst.insert(3);
+    bst.insert(5);
+    bst.insert(10);
+
+    // bst.remove(5);
+    // bst.remove(7);
+    bst.remove(7);
+    bst.remove(3);
+
+    bst.inorder(bst.getRoot());
 }
 
 void testHash() {
